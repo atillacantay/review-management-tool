@@ -1,0 +1,8 @@
+query FetchStates($where: String) {
+  states(where: $where) {
+    results {
+      id
+      key
+    }
+  }
+}

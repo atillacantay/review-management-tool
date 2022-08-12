@@ -1,0 +1,41 @@
+mutation UpdateReviewState(
+  $reviewId: String!
+  $version: Long!
+  $actions: [ReviewUpdateAction!]!
+) {
+  updateReview(id: $reviewId, version: $version, actions: $actions) {
+    id
+    key
+    version
+    text
+    rating
+    locale
+    createdAt
+    authorName
+    customer {
+      email
+    }
+    state {
+      key
+      id
+    }
+    custom {
+      customFieldsRaw {
+        name
+        value
+      }
+    }
+    target {
+      id
+      ... on Product {
+        id
+        key
+        masterData {
+          current {
+            skus
+          }
+        }
+      }
+    }
+  }
+}

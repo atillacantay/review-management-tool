@@ -1,0 +1,37 @@
+query FetchReviewDetails($reviewId: String!) {
+  review(id: $reviewId) {
+    id
+    key
+    version
+    text
+    rating
+    locale
+    createdAt
+    authorName
+    customer {
+      email
+    }
+    state {
+      key
+      id
+    }
+    custom {
+      customFieldsRaw {
+        name
+        value
+      }
+    }
+    target {
+      id
+      ... on Product {
+        id
+        key
+        masterData {
+          current {
+            skus
+          }
+        }
+      }
+    }
+  }
+}
