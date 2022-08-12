@@ -13,7 +13,7 @@ const config = {
     },
     production: {
       applicationId: 'cl6qb6d6v163295001w3cgndhils',
-      url: 'https://your_app_hostname.com',
+      url: 'https://fantastic-empanada-3fbb7f.netlify.app',
     },
   },
 
