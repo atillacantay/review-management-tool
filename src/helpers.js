@@ -44,7 +44,7 @@ export const getCustom = (custom, fieldName) =>
 
 export const getStoreKey = (review) => getCustom(review.custom, 'storeKey');
 
-export const getShop = (review) => getStoreKey(review); // getStoreKey(review)?.split('-')[0];
+export const getShop = (review) => getStoreKey(review)?.split('-')[0];
 
 export const getCountry = (review) => getStoreKey(review)?.split('-')[1];
 
